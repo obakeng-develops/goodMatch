@@ -1,3 +1,4 @@
+// creates a character frequency in creation order 
 let createCharMapping = (text) => {
 
     charMap = {};
