@@ -1,6 +1,14 @@
 let createCharMapping = (text) => {
 
-    charMap = {}
+    charMap = {};
+
+    for (char of text.replace(/\+s/g, '')) {
+        if (char in charMap) {
+            charMap[char] += 1;
+        } else {
+            charMap[char] = 1;
+        }
+    }
 
     return charMap
 
