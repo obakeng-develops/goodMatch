@@ -78,3 +78,5 @@ function matchParticipants(participant1, participant2) {
     let percentage = findPercentage(0, frequencyResult.length - 1, frequencyResult);
     finalOutput(participant1, participant2, percentage);
 }
+
+matchParticipants("Jack", "Jill");
