@@ -50,6 +50,8 @@ let findPercentage = (left, right, stringResult) => {
         }
     }
 
+    findPercentage(0, final.length - 1, final);
+
 }
 
 function matchParticipants(participant1, participant2) {
