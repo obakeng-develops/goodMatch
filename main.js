@@ -20,6 +20,10 @@ let createFrequencyResult = (characterMap) => {
 
     firstNumber = "";
 
+    for (key in characterMap) {
+        firstNumber += characterMap[key]
+    }
+
     return firstNumber
 
 }
