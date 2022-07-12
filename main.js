@@ -37,6 +37,19 @@ let findPercentage = (left, right, stringResult) => {
 
     let final = "";
 
+    while (left < right) {
+        let addNums = Number(stringResult[left]) + Number(stringResult[right]);
+
+        final += String(num);
+
+        left += 1
+        right -= 1
+
+        if (left == right) {
+            final += result[left]
+        }
+    }
+
 }
 
 function matchParticipants(participant1, participant2) {
