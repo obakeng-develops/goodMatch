@@ -66,6 +66,8 @@ let finalOutput = (participant1, participant2, percentage) => {
         finalText = participant1 + " matches " + participant2 + "%"
     }
 
+    console.log(finalText);
+
 }
 
 function matchParticipants(participant1, participant2) {
