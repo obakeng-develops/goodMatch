@@ -17,7 +17,11 @@ let createCharMapping = (text) => {
 
 // creates an initial number result from the character frequency map
 let createFrequencyResult = (characterMap) => {
-    
+
+    firstNumber = "";
+
+    return firstNumber
+
 }
 
 function matchParticipants(participant1, participant2) {
