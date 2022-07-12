@@ -1,5 +1,9 @@
 let createCharMapping = (text) => {
-    
+
+    charMap = {}
+
+    return charMap
+
 }
 
 function matchParticipants(participant1, participant2) {
