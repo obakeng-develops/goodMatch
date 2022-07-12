@@ -60,6 +60,12 @@ let finalOutput = (participant1, participant2, percentage) => {
 
     let finalText = "";
 
+    if (percentage > 80) {
+        finalText = participant1 + " matches " + participant2 + "%, good match"
+    } else {
+        finalText = participant1 + " matches " + participant2 + "%"
+    }
+
 }
 
 function matchParticipants(participant1, participant2) {
