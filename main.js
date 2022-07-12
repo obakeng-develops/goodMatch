@@ -58,6 +58,8 @@ let findPercentage = (left, right, stringResult) => {
 
 let finalOutput = (participant1, participant2, percentage) => {
 
+    let finalText = "";
+
 }
 
 function matchParticipants(participant1, participant2) {
