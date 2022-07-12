@@ -40,7 +40,7 @@ let findPercentage = (left, right, stringResult) => {
     while (left < right) {
         let addNums = Number(stringResult[left]) + Number(stringResult[right]);
 
-        final += String(num);
+        final += String(addNums);
 
         left += 1
         right -= 1
