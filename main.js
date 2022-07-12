@@ -46,7 +46,7 @@ let findPercentage = (left, right, stringResult) => {
         right -= 1
 
         if (left == right) {
-            final += result[left]
+            final += stringResult[left]
         }
     }
 
