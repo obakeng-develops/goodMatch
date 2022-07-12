@@ -4,5 +4,5 @@ function matchParticipants(participant1, participant2) {
     let charMapping = createCharMapping(fullText);
     let frequencyResult = createFrequencyResult(charMapping);
     let percentage = findPercentage(0, frequencyResult.length - 1, frequencyResult);
-    output(participant1, participant2, percentage);
+    finalOutput(participant1, participant2, percentage);
 }
