@@ -30,7 +30,11 @@ let createFrequencyResult = (characterMap) => {
 
 // find the percentage by adding the firstNumber recursively using two pointers - left & right
 let findPercentage = (left, right, stringResult) => {
-    
+ 
+    if (stringResult.length == 2){
+        return stringResult
+    }
+
 }
 
 function matchParticipants(participant1, participant2) {
