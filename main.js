@@ -54,6 +54,8 @@ let findPercentage = (left, right, stringResult) => {
 
 }
 
+
+// final output text after finding percentage
 let finalOutput = (participant1, participant2, percentage) => {
 
     let finalText = "";
