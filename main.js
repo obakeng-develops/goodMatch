@@ -3,7 +3,7 @@ let createCharMapping = (text) => {
 
     charMap = {};
 
-    for (char of text.replace(/\+s/g, '')) {
+    for (char of text.replace(/\s+/g, '')) {
         if (char in charMap) {
             charMap[char] += 1;
         } else {
