@@ -80,4 +80,4 @@ function matchParticipants(participant1, participant2) {
     finalOutput(participant1, participant2, percentage);
 }
 
-matchParticipants("Jack", "Jill");
+export { matchParticipants };
