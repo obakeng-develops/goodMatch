@@ -4,7 +4,7 @@ goodMatch is a library that calculates match percentages between two people's fi
 
 ## Usage
 
-`npm install matchgood`
+`npm install --save-dev matchgood`
 
 ## Example - In your index (or any file)
 
