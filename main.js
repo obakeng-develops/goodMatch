@@ -1,3 +1,21 @@
+function matchParticipants(participant1, participant2) {
+
+    const re = /^[A-Za-z]+$/;
+
+    if(!re.test(participant1) || !re.test(participant2)) {
+        console.log("Error: One of the names contains non-alphabetic characters.");
+        return;
+    }
+
+    let fullText = participant1.toLowerCase() + " matches " + participant2.toLowerCase();
+    let charMapping = createCharMapping(fullText);
+    let frequencyResult = createFrequencyResult(charMapping);
+    let percentage = findPercentage(0, frequencyResult.length - 1, frequencyResult);
+    let result = finalOutput(participant1, participant2, percentage);
+
+    console.log(result);
+}
+
 // creates a character frequency in creation order 
 function createCharMapping(text) {
 
@@ -72,24 +90,6 @@ function finalOutput (participant1, participant2, percentage) {
 
     return finalText
 
-}
-
-function matchParticipants(participant1, participant2) {
-
-    const re = /^[A-Za-z]+$/;
-
-    if(!re.test(participant1) || !re.test(participant2)) {
-        console.log("Error: One of the names contains non-alphabetic characters.");
-        return;
-    }
-
-    let fullText = participant1.toLowerCase() + " matches " + participant2.toLowerCase();
-    let charMapping = createCharMapping(fullText);
-    let frequencyResult = createFrequencyResult(charMapping);
-    let percentage = findPercentage(0, frequencyResult.length - 1, frequencyResult);
-    let result = finalOutput(participant1, participant2, percentage);
-
-    console.log(result);
 }
 
 export { matchParticipants, finalOutput, findPercentage, createFrequencyResult, createCharMapping };
