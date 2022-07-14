@@ -83,9 +83,9 @@ function finalOutput (participant1, participant2, percentage) {
     participant2 = participant2.charAt(0).toUpperCase() + participant2.slice(1);
 
     if (percentage >= 80) {
-        finalText = participant1 + " matches " + participant2 +  " " + percentage +"%, good match";
+        finalText = participant1 + " matches " + participant2 +  " " + percentage +"%, good match\n";
     } else {
-        finalText = participant1 + " matches " + participant2 + " " + percentage +  "%";
+        finalText = participant1 + " matches " + participant2 + " " + percentage +  "%\n";
     }
 
     return finalText
