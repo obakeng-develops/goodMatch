@@ -91,7 +91,7 @@ function write(filePath, content) {
         console.log(`An error occurred while writing to the file. Error: ${error.message}`);
     });
 
-    writeableStream.write(content, 'utf-8', () => {
+    writeableStream.write(content + '\n', 'utf-8', () => {
         console.log("Writing line");
     });
 
