@@ -8,5 +8,7 @@ function readFile() {
         let females = new Set();
         let males = new Set();
 
+        fillSets(females, males, content);
+
     });
 }
