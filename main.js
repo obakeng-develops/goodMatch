@@ -1,5 +1,5 @@
 // creates a character frequency in creation order 
-let createCharMapping = (text) => {
+function createCharMapping(text) {
 
     let charMap = {};
     text = text.replace(/\s+/g, '')
@@ -17,7 +17,7 @@ let createCharMapping = (text) => {
 }
 
 // creates an initial number result from the character frequency map
-let createFrequencyResult = (characterMap) => {
+function createFrequencyResult(characterMap) {
 
     let firstNumber = "";
 
@@ -30,7 +30,7 @@ let createFrequencyResult = (characterMap) => {
 }
 
 // find the percentage by adding the firstNumber recursively using two pointers - left & right
-let findPercentage = (left, right, stringResult) => {
+function findPercentage(left, right, stringResult) {
  
     if (stringResult.length == 2){
         return stringResult
@@ -57,7 +57,7 @@ let findPercentage = (left, right, stringResult) => {
 
 
 // final output text after finding percentage
-let finalOutput = (participant1, participant2, percentage) => {
+function finalOutput (participant1, participant2, percentage) {
 
     let finalText = "";
 
