@@ -102,5 +102,3 @@ function write(filePath, content) {
 }
 
 export { readFile, fillSets, listMatches };
-
-var data = readFile('input.csv');
