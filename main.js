@@ -67,7 +67,7 @@ function finalOutput (participant1, participant2, percentage) {
         finalText = participant1 + " matches " + participant2 + " " + percentage +  "%";
     }
 
-    console.log(finalText);
+    return finalText
 
 }
 
