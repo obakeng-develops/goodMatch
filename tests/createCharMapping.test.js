@@ -27,7 +27,7 @@ test('creates a character mapping from string', () => {
 
     let secondFullText = "jack matches jill";
 
-    expect(createCharMapping(fullText)).toEqual({
+    expect(createCharMapping(secondFullText)).toEqual({
         j: 2,
         a: 2,
         c: 2,
