@@ -33,5 +33,8 @@ function fillSets(firstSet, secondSet, dataArray) {
             secondSet.add(name);
         }
     }
+}
 
+function listMatches(firstSet, secondSet) {
+    
 }
