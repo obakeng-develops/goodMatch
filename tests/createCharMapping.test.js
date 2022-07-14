@@ -8,7 +8,7 @@ import {
 
 test('creates a character mapping from string', () => {
 
-    let fullText = "Magic matches Johnson";
+    let fullText = "magic matches johnson";
 
     expect(createCharMapping(fullText)).toEqual({
         
