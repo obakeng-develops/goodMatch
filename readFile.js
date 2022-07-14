@@ -89,6 +89,7 @@ function listMatches(firstSet, secondSet) {
                     return;
                 }
             });
+            write('output.txt', matchParticipants(femaleNames[i], maleNames[i]))
         }
 
     }
@@ -96,7 +97,7 @@ function listMatches(firstSet, secondSet) {
 
 function write(filePath, content) {
 
-    const writeableStream = fs.createWriteStream(filePath);
+    const writeableStream = fs.createWriteStream(filePath, { flags: 'a' });
 
     writeableStream.on('error', (error) => {
         console.log(`An error occurred while writing to the file. Error: ${error.message}`);
