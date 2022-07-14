@@ -7,4 +7,9 @@ test('match the participants', () => {
 
     expect(matchParticipants("Jack", "Jill")).toEqual("Jack matches Jill 60%");
 
+    let thirdParticipant = "Kimberley";
+    let fourthParticipant = "Jason";
+
+    expect(matchParticipants("Kimberley", "Jason")).toEqual("Kimberley matches Jason 30%");
+
 });
