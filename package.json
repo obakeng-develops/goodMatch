@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/obakeng-develops/goodMatch/issues"
   },
-  "homepage": "https://github.com/obakeng-develops/goodMatch#readme"
+  "homepage": "https://github.com/obakeng-develops/goodMatch#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
 }
