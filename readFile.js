@@ -53,5 +53,6 @@ function listMatches(firstSet, secondSet) {
         }
 
     }
-
 }
+
+readFile();
