@@ -5,3 +5,7 @@ import {
     createFrequencyResult, 
     createCharMapping 
 } from "../main";
+
+test('creates a character mapping from string', () => {
+
+});
