@@ -76,6 +76,7 @@ function matchParticipants(participant1, participant2) {
 
     if(!re.test(participant1) || !re.test(participant2)) {
         console.log("Error: One of the names contains non-alphabetic characters.");
+        return;
     }
 
     let fullText = participant1 + " matches " + participant2;
