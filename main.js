@@ -74,6 +74,10 @@ function matchParticipants(participant1, participant2) {
 
     const re = /^[A-Za-z]+$/;
 
+    if(!re.test(participant1) || !re.test(participant2)) {
+        console.log("Error: One of the names contains non-alphabetic characters.")
+    }
+
     // test each name for only alphabetic characters
     let fullText = participant1 + " matches " + participant2;
     let charMapping = createCharMapping(fullText);
