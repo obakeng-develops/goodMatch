@@ -64,6 +64,7 @@ function listMatches(firstSet, secondSet) {
             fs.writeFile('output.txt', matchParticipants(femaleNames[i], maleNames[i]), { flag: 'a'}, err => {
                 if(err) {
                     console.log(err);
+                    return;
                 }
             });
         }
@@ -74,6 +75,7 @@ function listMatches(firstSet, secondSet) {
             fs.writeFile('output.txt', matchParticipants(femaleNames[i], maleNames[i]), { flag: 'a' }, err => {
                 if(err) {
                     console.log(err);
+                    return;
                 }
             });
         }
