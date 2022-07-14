@@ -25,4 +25,6 @@ test('creates a character mapping from string', () => {
         n: 2
     });
 
+    let secondFullText = "jack matches jill";
+
 });
