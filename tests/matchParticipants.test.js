@@ -12,4 +12,9 @@ test('match the participants', () => {
 
     expect(matchParticipants("Kimberley", "Jason")).toEqual("Kimberley matches Jason 30%");
 
+    let fifthParticipant = "Otshepeng";
+    let sixthParticipant = "Tommy";
+
+    expect(matchParticipants("Kimberley", "Jason")).toEqual("Kimberley matches Jason 93%, good match");
+
 });
