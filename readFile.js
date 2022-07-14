@@ -6,6 +6,7 @@ function readFile() {
 
         let content = data.split("\r\n");
         let females = new Set();
+        let males = new Set();
 
     });
 }
