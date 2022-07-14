@@ -4,23 +4,32 @@ import * as path from 'path';
 
 function readFile(fileName) {
 
-    if (path.extname(fileName) == '.csv') {
-        fs.readFile(fileName, 'utf-8', (err, data) => {
+    fs.exists(fileName, (isExist) => {
+        if(!isExist) {
+            console.error("File does not exist");
+            return;
+        } else {
+            if (path.extname(fileName) == '.csv') {
+                fs.readFile(fileName, 'utf-8', (err, data) => {
 
-            if (data.length == 0) {
-                console.error("The file is empty.");
-                return;
+                    if (data.length == 0) {
+                        console.error("The file is empty.");
+                        return;
+                    }
+
+                    let content = data.split("\r\n");
+                    let females = new Set();
+                    let males = new Set();
+
+                    fillSets(females, males, content);
+
+                    listMatches(females, males);
+                });
+            } else {
+                console.error("Please use a file in csv format.")
             }
-
-            let content = data.split("\r\n");
-            let females = new Set();
-            let males = new Set();
-
-            fillSets(females, males, content);
-
-            listMatches(females, males);
-        });
-    }
+        }
+    });
 }
 
 function fillSets(firstSet, secondSet, dataArray) {
