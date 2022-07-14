@@ -101,4 +101,4 @@ function write(filePath, content) {
 
 }
 
-export default { readFile, fillSets, listMatches };
+export default { readFile };
