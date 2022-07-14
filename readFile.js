@@ -22,6 +22,8 @@ function fillSets(firstSet, secondSet, dataArray) {
 
     for (let person in dataArray) {
         let [name, gender] = dataArray[person];
+
+        gender = gender.replace(/\s+/g, '');
     }
 
 }
