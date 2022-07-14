@@ -1,0 +1,1 @@
+import { findPercentage } from '../main';
