@@ -1,0 +1,2 @@
+import { createFrequencyResult } from "../main";
+
