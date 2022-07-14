@@ -24,6 +24,14 @@ function fillSets(firstSet, secondSet, dataArray) {
         let [name, gender] = dataArray[person];
 
         gender = gender.replace(/\s+/g, '');
+
+        if (gender === 'f') {
+            firstSet.add(name);
+        }
+
+        if (gender === 'm') {
+            secondSet.add(name);
+        }
     }
 
 }
