@@ -1,4 +1,4 @@
-import { matchParticipants } from "./utils.js";
+import matchParticipants from "./utils.js";
 import * as fs from 'fs';
 import * as path from 'path';
 import readline from 'readline';
