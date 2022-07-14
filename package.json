@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/obakeng-develops/goodMatch.git"
   },
-  "keywords": [],
+  "keywords": ["matching"],
   "author": "Obakeng Mosadi",
   "license": "ISC",
   "bugs": {
