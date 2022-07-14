@@ -40,4 +40,18 @@ function listMatches(firstSet, secondSet) {
     let femaleNames = Array.from(firstSet);
     let maleNames = Array.from(secondSet);
 
+    if (femaleNames.length <= maleNames.length) {
+
+        for (let i = 0; i < femaleNames.length; i++) {
+            matchParticipants(femaleNames[i], maleNames[i]);
+        }
+
+    } else {
+
+        for (let i = 0; i < femaleNames.length; i++) {
+            matchParticipants(femaleNames[i], maleNames[i]);
+        }
+
+    }
+
 }
