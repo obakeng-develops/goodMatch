@@ -38,5 +38,6 @@ function fillSets(firstSet, secondSet, dataArray) {
 function listMatches(firstSet, secondSet) {
     
     let femaleNames = Array.from(firstSet);
+    let maleNames = Array.from(secondSet);
 
 }
