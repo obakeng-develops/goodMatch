@@ -3,21 +3,24 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 function readFile(fileName) {
-    fs.readFile(fileName, 'utf-8', (err, data) => {
 
-        if (data.length == 0) {
-            console.error("The file is empty.");
-            return;
-        }
+    if (path.extname(fileName) == '.csv') {
+        fs.readFile(fileName, 'utf-8', (err, data) => {
 
-        let content = data.split("\r\n");
-        let females = new Set();
-        let males = new Set();
+            if (data.length == 0) {
+                console.error("The file is empty.");
+                return;
+            }
 
-        fillSets(females, males, content);
+            let content = data.split("\r\n");
+            let females = new Set();
+            let males = new Set();
 
-        listMatches(females, males);
-    });
+            fillSets(females, males, content);
+
+            listMatches(females, males);
+        });
+    }
 }
 
 function fillSets(firstSet, secondSet, dataArray) {
