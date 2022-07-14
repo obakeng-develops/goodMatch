@@ -83,13 +83,7 @@ function listMatches(firstSet, secondSet) {
     } else {
 
         for (let i = 0; i < femaleNames.length; i++) {
-            fs.writeFile('output.txt', matchParticipants(femaleNames[i], maleNames[i]), { flag: 'a' }, err => {
-                if(err) {
-                    console.error(err);
-                    return;
-                }
-            });
-            write('output.txt', matchParticipants(femaleNames[i], maleNames[i]))
+            write('output.txt', matchParticipants(femaleNames[i], maleNames[i]));
         }
 
     }
