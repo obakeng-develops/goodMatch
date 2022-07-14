@@ -1,9 +1,9 @@
 import { matchParticipants } from "../matchGood/main.js";
 import * as fs from 'fs';
 import * as path from 'path';
-import { readline } from 'readline';
+import readline from 'readline';
 
-async function readFile(fileName) {
+function readFile(fileName) {
 
     fs.exists(fileName, (isExist) => {
         if(!isExist) {
@@ -12,18 +12,11 @@ async function readFile(fileName) {
         } else {
             if (path.extname(fileName) == '.csv') {
 
-                const stream = fs.createReadStream(fileName, { highWaterMark: 10000000 });
-                const rLine = readline.createInterface({
-                    input: stream
-                });
-
-                rLine.on('line', (line) => {
-                    if (line.length == 0) {
-                        console.error("The file is empty.");
-                        return;
-                    }
-
-                    let content = line.split("\r\n");
+                const stream = fs.createReadStream(fileName, 'utf8');
+                
+                stream.on('data', (chunk) => {
+                    console.log("Parsing and writing data.");
+                    let content = chunk.split("\r\n");
                     let females = new Set();
                     let males = new Set();
 
@@ -31,7 +24,16 @@ async function readFile(fileName) {
 
                     listMatches(females, males);
                 });
+
+                stream.on('error', (error) => {
+                    console.error(`Error: ${error.message}`);
+                });
+
+                stream.on('close', () => {
+                    console.log('Data parsing and writing complete. Matches have been written to output.txt');
+                });
                 
+
             } else {
                 console.error("Please use a file in csv format.");
                 return;
