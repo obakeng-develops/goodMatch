@@ -97,7 +97,7 @@ function write(filePath, content) {
 
     writeableStream.on('finish', () => {
         console.log("Done writing content.")
-    })
+    });
 
 }
 
