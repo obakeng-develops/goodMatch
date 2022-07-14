@@ -10,5 +10,6 @@ function readFile() {
 
         fillSets(females, males, content);
 
+        listMatches(females, males);
     });
 }
