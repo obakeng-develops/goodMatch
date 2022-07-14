@@ -8,6 +8,6 @@ test('find percentage of initial number', () => {
 
     let secondStringResult = "221121212122";
 
-    expect(findPercentage(0, secondStringResult.length - 1, secondStringResult)).toBe('20');
+    expect(findPercentage(0, secondStringResult.length - 1, secondStringResult)).toBe('82');
 
 });
