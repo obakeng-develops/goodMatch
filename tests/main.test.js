@@ -8,4 +8,6 @@ import {
 
 test('creates a character mapping from string', () => {
 
+    fullText = "Magic matches Johnson";
+
 });
