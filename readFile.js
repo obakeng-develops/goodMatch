@@ -26,7 +26,8 @@ function readFile(fileName) {
                     listMatches(females, males);
                 });
             } else {
-                console.error("Please use a file in csv format.")
+                console.error("Please use a file in csv format.");
+                return;
             }
         }
     });
