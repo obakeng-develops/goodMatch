@@ -4,17 +4,18 @@ test('match the participants', () => {
 
     let firstParticipant = "Jack";
     let secondParticipant = "Jill";
+    let result = matchParticipants(firstParticipant, secondParticipant);
 
-    expect(matchParticipants(firstParticipant, secondParticipant)).toEqual("Jack matches Jill 60%");
+    expect(result).toEqual("Jack matches Jill 60%");
 
     let thirdParticipant = "Kimberley";
     let fourthParticipant = "Jason";
 
-    expect(matchParticipants(thirdParticipant, fourthParticipant)).toEqual("Kimberley matches Jason 30%");
+    expect(matchParticipants(thirdParticipant, fourthParticipant)).toBe("Kimberley matches Jason 30%");
 
     let fifthParticipant = "Otshepeng";
     let sixthParticipant = "Tommy";
 
-    expect(matchParticipants(fifthParticipant, sixthParticipant)).toEqual("Otshepeng matches Tommy 93%, good match");
+    expect(matchParticipants(fifthParticipant, sixthParticipant)).toBe("Otshepeng matches Tommy 93%, good match");
 
 });
