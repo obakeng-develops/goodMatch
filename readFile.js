@@ -13,3 +13,9 @@ function readFile() {
         listMatches(females, males);
     });
 }
+
+function fillSets(firstSet, secondSet, dataArray) {
+
+    
+
+}
