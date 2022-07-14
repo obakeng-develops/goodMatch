@@ -1,8 +1,8 @@
 import { matchParticipants } from "../matchGood/main.js";
 import * as fs from 'fs';
 
-function readFile() {
-    fs.readFile('input.csv', 'utf-8', (err, data) => {
+function readFile(fileName) {
+    fs.readFile(fileName, 'utf-8', (err, data) => {
 
         let content = data.split("\r\n");
         let females = new Set();
@@ -43,13 +43,21 @@ function listMatches(firstSet, secondSet) {
     if (femaleNames.length <= maleNames.length) {
 
         for (let i = 0; i < femaleNames.length; i++) {
-            matchParticipants(femaleNames[i], maleNames[i]);
+            fs.writeFile('output.txt', matchParticipants(femaleNames[i], maleNames[i]), { flag: 'a'}, err => {
+                if(err) {
+                    console.log(err);
+                }
+            });
         }
 
     } else {
 
         for (let i = 0; i < femaleNames.length; i++) {
-            matchParticipants(femaleNames[i], maleNames[i]);
+            fs.writeFile('output.txt', matchParticipants(femaleNames[i], maleNames[i]), { flag: 'a' }, err => {
+                if(err) {
+                    console.log(err);
+                }
+            });
         }
 
     }
@@ -57,4 +65,4 @@ function listMatches(firstSet, secondSet) {
 
 export { readFile, fillSets, listMatches };
 
-readFile();
+var data = readFile('input.csv');
