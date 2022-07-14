@@ -1,6 +1,8 @@
 import { matchParticipants } from "../matchGood/main.js";
 import * as fs from 'fs';
 import * as path from 'path';
+import readline from 'readline;'
+import { rawListeners } from "process";
 
 function readFile(fileName) {
 
@@ -90,6 +92,24 @@ function listMatches(firstSet, secondSet) {
         }
 
     }
+}
+
+function write(filePath, content) {
+
+    const writeableStream = fs.createWriteStream(filePath);
+
+    writeableStream.on('error', (error) => {
+        console.log(`An error occurred while writing to the file. Error: ${error.message}`);
+    });
+
+    writeableStream.write(content, 'utf-8', () => {
+        console.log("Writing line");
+    });
+
+    writeableStream.on('finish', () => {
+        console.log("Done writing content.")
+    })
+
 }
 
 export { readFile, fillSets, listMatches };
