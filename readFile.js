@@ -4,6 +4,11 @@ import * as fs from 'fs';
 function readFile(fileName) {
     fs.readFile(fileName, 'utf-8', (err, data) => {
 
+        if (data.length == 0) {
+            console.error("The file is empty.");
+            return;
+        }
+
         let content = data.split("\r\n");
         let females = new Set();
         let males = new Set();
