@@ -72,12 +72,7 @@ function listMatches(firstSet, secondSet) {
     if (femaleNames.length <= maleNames.length) {
 
         for (let i = 0; i < femaleNames.length; i++) {
-            fs.writeFile('output.txt', matchParticipants(femaleNames[i], maleNames[i]), { flag: 'a'}, err => {
-                if(err) {
-                    console.error(err);
-                    return;
-                }
-            });
+            write('output.txt', matchParticipants(femaleNames[i], maleNames[i]));
         }
 
     } else {
