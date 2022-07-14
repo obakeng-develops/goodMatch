@@ -2,7 +2,7 @@ import { matchParticipants } from "../matchGood/main.js";
 import * as fs from 'fs';
 import * as path from 'path';
 
-function readFile(fileName) {
+async function readFile(fileName) {
 
     fs.exists(fileName, (isExist) => {
         if(!isExist) {
@@ -10,8 +10,11 @@ function readFile(fileName) {
             return;
         } else {
             if (path.extname(fileName) == '.csv') {
-                fs.readFile(fileName, 'utf-8', (err, data) => {
 
+                const stream = fs.createReadStream(fileName, { highWaterMark: 10000000 });
+
+                for await (const data of stream) {
+                    
                     if (data.length == 0) {
                         console.error("The file is empty.");
                         return;
@@ -24,7 +27,7 @@ function readFile(fileName) {
                     fillSets(females, males, content);
 
                     listMatches(females, males);
-                });
+                }
             } else {
                 console.error("Please use a file in csv format.");
                 return;
