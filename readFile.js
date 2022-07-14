@@ -6,7 +6,7 @@ function readFile(fileName) {
 
     fs.exists(fileName, (isExist) => {
         if(!isExist) {
-            console.error("File does not exist");
+            console.error("File does not exist.");
             return;
         } else {
             if (path.extname(fileName) == '.csv') {
