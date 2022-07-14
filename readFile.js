@@ -1,6 +1,7 @@
 import { matchParticipants } from "../matchGood/main.js";
 import * as fs from 'fs';
 import * as path from 'path';
+import { readline } from 'readline';
 
 async function readFile(fileName) {
 
@@ -14,7 +15,7 @@ async function readFile(fileName) {
                 const stream = fs.createReadStream(fileName, { highWaterMark: 10000000 });
 
                 for await (const data of stream) {
-                    
+
                     if (data.length == 0) {
                         console.error("The file is empty.");
                         return;
