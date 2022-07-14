@@ -72,6 +72,8 @@ let finalOutput = (participant1, participant2, percentage) => {
 
 function matchParticipants(participant1, participant2) {
 
+    const re = /^[A-Za-z]+$/;
+
     // test each name for only alphabetic characters
     let fullText = participant1 + " matches " + participant2;
     let charMapping = createCharMapping(fullText);
