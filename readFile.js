@@ -55,4 +55,6 @@ function listMatches(firstSet, secondSet) {
     }
 }
 
+export { readFile, fillSets, listMatches };
+
 readFile();
