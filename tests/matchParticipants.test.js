@@ -1,4 +1,4 @@
-import { matchParticipants } from "../main"; 
+import { matchParticipants } from "../utils"; 
 
 test('match the participants', () => {
 

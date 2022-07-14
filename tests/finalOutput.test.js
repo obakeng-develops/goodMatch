@@ -1,4 +1,4 @@
-import { finalOutput } from "../main";
+import { finalOutput } from "../utils";
 
 test('output final text using participant names and percentage', () => {
 

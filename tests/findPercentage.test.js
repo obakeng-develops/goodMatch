@@ -1,4 +1,4 @@
-import { findPercentage } from '../main';
+import { findPercentage } from '../utils';
 
 test('find percentage of initial number', () => {
 

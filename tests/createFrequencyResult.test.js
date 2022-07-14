@@ -1,4 +1,4 @@
-import { createFrequencyResult } from "../main";
+import { createFrequencyResult } from "../utils";
 
 test('creates initial number from character mapping', () => {
 
