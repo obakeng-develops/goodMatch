@@ -1,4 +1,4 @@
-import matchParticipants from "./utils.js";
+import * as utils from "./utils.js";
 import * as fs from 'fs';
 import * as path from 'path';
 import readline from 'readline';
@@ -71,13 +71,13 @@ function listMatches(firstSet, secondSet) {
     if (femaleNames.length <= maleNames.length) {
 
         for (let i = 0; i < femaleNames.length; i++) {
-            write('output.txt', matchParticipants(femaleNames[i], maleNames[i]));
+            write('output.txt', utils.default.matchParticipants(femaleNames[i], maleNames[i]));
         }
 
     } else {
 
         for (let i = 0; i < femaleNames.length; i++) {
-            write('output.txt', matchParticipants(femaleNames[i], maleNames[i]));
+            write('output.txt', utils.default.matchParticipants(femaleNames[i], maleNames[i]));
         }
 
     }
