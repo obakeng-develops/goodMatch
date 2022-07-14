@@ -41,5 +41,24 @@ test('creates a character mapping from string', () => {
         l: 2
     });
 
+    let thirdFullText = "novac matches djokovic";
+
+    expect(createCharMapping(thirdFullText)).not.toEqual({
+        n: 2,
+        o: 2,
+        v: 3,
+        a: 3,
+        c: 3,
+        m: 2,
+        t: 2,
+        h: 2,
+        e: 2,
+        s: 2,
+        d: 2,
+        j: 2,
+        k: 2,
+        i: 2,
+    });
+
 
 });
