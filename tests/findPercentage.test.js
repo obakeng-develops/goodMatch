@@ -12,6 +12,6 @@ test('find percentage of initial number', () => {
 
     let thirdStringResult = '3412111221';
 
-    expect(findPercentage(0, thirdStringResult.length - 1, thirdStringResult)).not.toBe('21')
+    expect(findPercentage(0, thirdStringResult.length - 1, thirdStringResult)).not.toBe('21');
 
 });
