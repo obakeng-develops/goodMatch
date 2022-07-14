@@ -87,4 +87,4 @@ function matchParticipants(participant1, participant2) {
     finalOutput(participant1, participant2, percentage);
 }
 
-export { matchParticipants };
+export { matchParticipants, finalOutput, findPercentage, createFrequencyResult, createCharMapping };
