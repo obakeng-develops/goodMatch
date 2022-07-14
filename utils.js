@@ -92,4 +92,4 @@ function finalOutput (participant1, participant2, percentage) {
 
 }
 
-export { matchParticipants, finalOutput, findPercentage, createFrequencyResult, createCharMapping };
+export default { matchParticipants, finalOutput, findPercentage, createFrequencyResult, createCharMapping };
