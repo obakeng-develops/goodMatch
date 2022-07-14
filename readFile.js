@@ -20,4 +20,8 @@ function fillSets(firstSet, secondSet, dataArray) {
         dataArray[line] = dataArray[line].split(",");
     }    
 
+    for (let person in dataArray) {
+        let [name, gender] = dataArray[person];
+    }
+
 }
