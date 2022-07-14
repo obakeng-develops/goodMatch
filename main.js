@@ -2,8 +2,9 @@
 let createCharMapping = (text) => {
 
     let charMap = {};
+    text = text.replace(/\s+/g, '')
 
-    for (let char of text.replace(/\s+/g, '')) {
+    for (let char of text) {
         if (char in charMap) {
             charMap[char] += 1;
         } else {
