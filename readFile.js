@@ -1,5 +1,6 @@
 import { matchParticipants } from "../matchGood/main.js";
 import * as fs from 'fs';
+import * as path from 'path';
 
 function readFile(fileName) {
     fs.readFile(fileName, 'utf-8', (err, data) => {
