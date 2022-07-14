@@ -38,4 +38,20 @@ test('creates initial number from character mapping', () => {
 
     expect(createFrequencyResult(secondCharMap)).toBe('22333222222222');
 
+    let thirdCharMap = {
+        j: 2,
+        a: 2,
+        c: 2,
+        k: 1,
+        m: 1,
+        t: 1,
+        h: 1,
+        e: 1,
+        s: 1,
+        i: 1,
+        l: 2
+    }
+
+    expect(createFrequencyResult(thirdCharMap)).not.toBe('21221121212')
+
 });
