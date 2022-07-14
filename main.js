@@ -1,9 +1,9 @@
 // creates a character frequency in creation order 
 let createCharMapping = (text) => {
 
-    charMap = {};
+    let charMap = {};
 
-    for (char of text.replace(/\s+/g, '')) {
+    for (let char of text.replace(/\s+/g, '')) {
         if (char in charMap) {
             charMap[char] += 1;
         } else {
@@ -18,9 +18,9 @@ let createCharMapping = (text) => {
 // creates an initial number result from the character frequency map
 let createFrequencyResult = (characterMap) => {
 
-    firstNumber = "";
+    let firstNumber = "";
 
-    for (key in characterMap) {
+    for (let key in characterMap) {
         firstNumber += characterMap[key]
     }
 
