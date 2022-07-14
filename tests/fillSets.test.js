@@ -17,6 +17,6 @@ test('fill set groups', () => {
 
     fillSets(firstSet, secondSet, firstArray);
 
-    expect(firstSet).toEqual(new Set('Kimberley', 'Trini', 'Billy'));
+    expect(secondSet).toBe(new Set('Kimberley', 'Trini', 'Billy'));
 
 });
