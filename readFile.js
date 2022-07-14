@@ -16,6 +16,8 @@ function readFile() {
 
 function fillSets(firstSet, secondSet, dataArray) {
 
-    
+    for (let line in dataArray) {
+        dataArray[line] = dataArray[line].split(",");
+    }    
 
 }
