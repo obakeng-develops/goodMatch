@@ -8,8 +8,8 @@ goodMatch is a library that calculates match percentages between two people's fi
 
 ## Example - In your index (or any file)
 
-`
+```
 import readFile from 'matchgood';
 
 readFile('input.csv');
-`
+```
