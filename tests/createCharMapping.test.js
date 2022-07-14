@@ -1,4 +1,4 @@
-import { createCharMapping } from "../utils";
+import createCharMapping from "../utils";
 
 test('creates a character mapping from string', () => {
 
