@@ -13,7 +13,7 @@ function matchParticipants(participant1, participant2) {
     let percentage = findPercentage(0, frequencyResult.length - 1, frequencyResult);
     let result = finalOutput(participant1, participant2, percentage);
 
-    console.log(result);
+    return result
 }
 
 // creates a character frequency in creation order 
