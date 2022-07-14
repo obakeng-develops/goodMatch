@@ -13,22 +13,25 @@ async function readFile(fileName) {
             if (path.extname(fileName) == '.csv') {
 
                 const stream = fs.createReadStream(fileName, { highWaterMark: 10000000 });
+                const rLine = readline.createInterface({
+                    input: stream
+                });
 
-                for await (const data of stream) {
-
-                    if (data.length == 0) {
+                rLine.on('line', (line) => {
+                    if (line.length == 0) {
                         console.error("The file is empty.");
                         return;
                     }
 
-                    let content = data.split("\r\n");
+                    let content = line.split("\r\n");
                     let females = new Set();
                     let males = new Set();
 
                     fillSets(females, males, content);
 
                     listMatches(females, males);
-                }
+                });
+                
             } else {
                 console.error("Please use a file in csv format.");
                 return;
